@@ -1,0 +1,74 @@
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-xs-6">
+        <a href="{{ h.url_for(controller='package', action='search') }}">
+          {% set dataset_count = h.get_dataset_count() %}
+          <div class="statsnumber">
+            {{ dataset_count }} <i class="fa fa-files-o"></i>
+          </div>
+          <p>{{ ungettext('Dataset', 'Datasets', dataset_count) }}</p>
+        </a>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <a href="{{ h.url_for(controller='organization', action='index') }}">
+          {% set org_count = h.get_org_count() %}
+          <div class="statsnumber">
+            {{ org_count }} <i class="fa fa-users"></i>
+          </div>
+          <p>{{ ungettext('Organization', 'Organizations', org_count) }}</p>
+        </a>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <a href="{{ h.url_for(controller='group', action='index') }}">
+          {% set group_count = h.get_group_count() %}
+          <div class="statsnumber">
+            {{ group_count }} <i class="fa fa-tags"></i>
+          </div>
+          <p>{{ ungettext('Category', 'Categories', group_count) }}</p>
+        </a>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <a href="{{ h.url('/app') }}">
+          {% set app_count = h.get_app_count() %}
+          <div class="statsnumber">
+            {{ app_count }} <i class="fa fa-code"></i>
+          </div>
+          <p>{{ ungettext('Application', 'Modules', app_count) }}</p>
+        </a>
+      </div>
+    </div>
+    <div class="row top-buffer">
+      <div class="col-md-2 col-xs-12">
+        {% snippet "snippets/language_selector.html" %}
+      </div>
+      <div class="col-md-2 col-xs-6">
+        <div>
+          <ul class="list-unstyled">
+            <li><a href="{{ h.url('/about') }}">{{ _('About') }}</a></li>
+            <li><a href="{{ h.url('/terms') }}">{{ _('Terms of Use') }}</a></li>
+            <li><a href="{{ h.url('/contact') }}">{{ _('Contact') }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2 col-xs-6">
+        <div>
+          <ul class="list-unstyled">
+            <li><a href="{{ h.url_for(controller='package', action='search') }}">{{ _('Data') }}</a></li>
+            <li><a href="{{ h.url_for(controller='organization', action='index') }}">{{ _('Organizations') }}</a></li>
+            <li><a href="{{ h.url('/group') }}">{{ _('Categories') }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2 col-xs-6">
+        <div>
+          <ul class="list-unstyled">
+            <li><a href="https://hues.empa.ch/index.php/List_of_modules">{{ _('Modules') }}</a></li>
+            <li><a href="http://docs.ckan.org/en/latest/api/index.html" target="_blank">{{ _('API') }}</a></li>
+            <li><a href="https://hues.empa.ch/" target="_blank">{{ _('HUES Wiki') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

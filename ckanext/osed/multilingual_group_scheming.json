@@ -1,0 +1,59 @@
+{
+  "scheming_version": 1,
+  "group_type": "group",
+  "about": "Multilingual group schema",
+  "about_url": "https://github.com/krishnatejaperannagari/OSED",
+  "form_languages": ["de", "fr", "it", "en"],
+  "fields": [
+    {
+      "field_name": "title",
+      "label": {
+        "en": "Title",
+        "de": "Titel",
+        "fr": "Titre",
+        "it": "Titolo"
+      },
+      "preset": "multilingual_text"
+    },
+    {
+      "field_name": "display_name",
+      "label": {
+        "en": "Display name",
+        "de": "Anzeigename",
+        "fr": "Nom d'affichage",
+        "it": "Nome visualizzato"
+      },
+      "preset": "multilingual_output"
+    },
+    {
+      "field_name": "name",
+      "label": {
+        "en": "Slug",
+        "de": "Slug",
+        "fr": "Slug",
+        "it": "Slug"
+      },
+      "preset": "group_slug"
+    },
+    {
+      "field_name": "description",
+      "label": {
+        "en": "Description",
+        "de": "Beschreibung",
+        "fr": "Description",
+        "it": "Descrizione"
+      },
+      "preset": "multilingual_text"
+    },
+    {
+      "field_name": "url",
+      "label": {
+        "en": "Image URL",
+        "de": "Bild-URL",
+        "fr": "URL d'image",
+        "it": "URL d'immagine"
+      },
+      "form_placeholder": "http://example.com/my-image.jpg"
+    }
+  ]
+}

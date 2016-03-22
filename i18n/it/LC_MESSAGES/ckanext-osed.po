@@ -1,0 +1,486 @@
+# Translations template for ckanext-osed.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the ckanext-osed
+# project.
+# 
+# Translators:
+# Andreas Amsler <andreas.amsler@liip.ch>, 2016
+# Andreas Weder <Andreas.Weder@gs-edi.admin.ch>, 2016
+# Mauro Bagnaschi <mauro.bagnaschi@gs-edi.admin.ch>, 2016
+# Stefan Oderbolz <oderbolz@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: osed.empa.ch\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-12-14 10:07+0000\n"
+"PO-Revision-Date: 2016-01-15 09:41+0000\n"
+"Last-Translator: Stefan Oderbolz <oderbolz@gmail.com>\n"
+"Language-Team: Italian (http://www.transifex.com/opendataswiss/opendata-swiss/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ckanext/osed/helpers.py:104
+msgid "Irregular"
+msgstr "Irregolarmente"
+
+#: ckanext/osed/helpers.py:105
+msgid "Continuous"
+msgstr "Continuamente"
+
+#: ckanext/osed/helpers.py:106
+msgid "Daily"
+msgstr "Giornalmente"
+
+#: ckanext/osed/helpers.py:107
+msgid "Three times a week"
+msgstr "Tre volte la settimana"
+
+#: ckanext/osed/helpers.py:108
+msgid "Semi weekly"
+msgstr "Due volte la settimana"
+
+#: ckanext/osed/helpers.py:109
+msgid "Weekly"
+msgstr "Settimanalmente"
+
+#: ckanext/osed/helpers.py:110
+msgid "Three times a month"
+msgstr "Tre volte il mese"
+
+#: ckanext/osed/helpers.py:111
+msgid "Biweekly"
+msgstr "Ogni due settimane"
+
+#: ckanext/osed/helpers.py:112
+msgid "Semimonthly"
+msgstr "Due volte il mese"
+
+#: ckanext/osed/helpers.py:113
+msgid "Monthly"
+msgstr "Mensilmente"
+
+#: ckanext/osed/helpers.py:114
+msgid "Bimonthly"
+msgstr "Ogni due mesi"
+
+#: ckanext/osed/helpers.py:115
+msgid "Quarterly"
+msgstr "Trimestralmente"
+
+#: ckanext/osed/helpers.py:116
+msgid "Three times a year"
+msgstr "Tre volte l'anno"
+
+#: ckanext/osed/helpers.py:117
+msgid "Semi Annual"
+msgstr "Due volte l'anno"
+
+#: ckanext/osed/helpers.py:118
+msgid "Annual"
+msgstr "Annualmente"
+
+#: ckanext/osed/helpers.py:119
+msgid "Biennial"
+msgstr "Ogni due anni"
+
+#: ckanext/osed/helpers.py:120
+msgid "Triennial"
+msgstr "Ogni tre anni"
+
+#: ckanext/osed/helpers.py:130
+msgid "Open data"
+msgstr "Dati aperti"
+
+#: ckanext/osed/helpers.py:134
+msgid "Reference required"
+msgstr "Fonte richiesta"
+
+#: ckanext/osed/helpers.py:138
+msgid "Commercial use with permission allowed"
+msgstr "Utilizzo commerciale ammesso previa autorizzazione"
+
+#: ckanext/osed/helpers.py:142
+msgid "Reference required / Commercial use with permission allowed"
+msgstr "Fonte richiesta / Utilizzo commerciale ammesso previa autorizzazione"
+
+#: ckanext/osed/helpers.py:146
+msgid "Closed data"
+msgstr "Closed data"
+
+#: ckanext/osed/plugin.py:68 ckanext/osed/plugin.py:90
+#: ckanext/osed/templates/group/index.html:3
+#: ckanext/osed/templates/group/index.html:6
+#: ckanext/osed/templates/group/index.html:10
+#: ckanext/osed/templates/group/read.html:8
+#: ckanext/osed/templates/package/snippets/description.html:61
+msgid "Categories"
+msgstr "Categorie"
+
+#: ckanext/osed/plugin.py:69 ckanext/osed/plugin.py:80
+#: ckanext/osed/plugin.py:91
+msgid "Keywords"
+msgstr "Parole chiave"
+
+#: ckanext/osed/plugin.py:70 ckanext/osed/plugin.py:81
+#: ckanext/osed/templates/footer.html:67
+#: ckanext/osed/templates/header.html:35
+#: ckanext/osed/templates/organization/index.html:7
+#: ckanext/osed/templates/organization/index.html:10
+#: ckanext/osed/templates/organization/index.html:14
+#: ckanext/osed/templates/organization/read.html:8
+#: ckanext/osed/templates/package/base.html:13
+msgid "Organizations"
+msgstr "Organizzazioni"
+
+#: ckanext/osed/plugin.py:71 ckanext/osed/plugin.py:82
+#: ckanext/osed/plugin.py:92
+#: ckanext/osed/templates/package/resource_read.html:41
+#: ckanext/osed/templates/package/snippets/description.html:31
+msgid "Terms of use"
+msgstr "Condizioni d'uso"
+
+#: ckanext/osed/plugin.py:72 ckanext/osed/plugin.py:83
+#: ckanext/osed/plugin.py:93
+msgid "Formats"
+msgstr "Formati"
+
+#: ckanext/osed/validators.py:33 ckanext/osed/validators.py:88
+#: ckanext/osed/validators.py:133
+#, python-format
+msgid "Expecting list of strings, got \"%s\""
+msgstr " il tipo di dato atteso è un elenco di stringhe, il dato immesso è \"%s\""
+
+#: ckanext/osed/validators.py:143
+#, python-format
+msgid "unexpected choice \"%s\""
+msgstr "selezione inattesa \"%s\""
+
+#: ckanext/osed/validators.py:160
+msgid "Identifier is already in use, it must be unique."
+msgstr "Identificatore già in uso. Inserirne uno univoco."
+
+#: ckanext/osed/templates/base.html:10
+#: ckanext/osed/templates/snippets/home_breadcrumb_item.html:2
+msgid "Home"
+msgstr "Pagina iniziale"
+
+#: ckanext/osed/templates/error_document_template.html:3
+#, python-format
+msgid "Error %(error_code)s"
+msgstr "Errore %(error_code)s"
+
+#: ckanext/osed/templates/error_document_template.html:6
+#: ckanext/osed/templates/error_document_template.html:10
+msgid "Page not found"
+msgstr "Pagina non trovata"
+
+#: ckanext/osed/templates/error_document_template.html:18
+msgid ""
+"Ooops... The page you're looking for isn't available. Here is a cool space "
+"shuttle to make you feel better!"
+msgstr "Ops... La pagina cercata non è disponibile. Si consoli con un bello space shuttle!"
+
+#: ckanext/osed/templates/footer.html:10
+msgid "Dataset"
+msgid_plural "Datasets"
+msgstr[0] "Dataset"
+msgstr[1] "Dataset"
+
+#: ckanext/osed/templates/footer.html:19
+#: ckanext/osed/templates/package/resource_read.html:56
+#: ckanext/osed/templates/package/snippets/description.html:47
+msgid "Organization"
+msgid_plural "Organizations"
+msgstr[0] "Organizzazione"
+msgstr[1] "Organizzazioni"
+
+#: ckanext/osed/templates/footer.html:28
+msgid "Category"
+msgid_plural "Categories"
+msgstr[0] "Categoria"
+msgstr[1] "Categorie"
+
+#: ckanext/osed/templates/footer.html:37
+msgid "Application"
+msgid_plural "Applications"
+msgstr[0] "Applicazione"
+msgstr[1] "Applicazioni"
+
+#: ckanext/osed/templates/footer.html:43
+msgid "How can you get involved?"
+msgstr "Come diventare parte di osed.empa.ch?"
+
+#: ckanext/osed/templates/footer.html:46
+#: ckanext/osed/templates/organization/index.html:24
+msgid "I want to publish data"
+msgstr "Desidero pubblicare dati"
+
+#: ckanext/osed/templates/footer.html:47
+msgid "I have developed an application"
+msgstr "Ho sviluppato un'applicazione"
+
+#: ckanext/osed/templates/footer.html:57
+#: ckanext/osed/templates/header.html:41
+msgid "About"
+msgstr "A proposito del portale"
+
+#: ckanext/osed/templates/footer.html:58
+#: ckanext/osed/templates/header.html:44
+msgid "FAQ"
+msgstr "FAQ"
+
+#: ckanext/osed/templates/footer.html:59
+msgid "Contact"
+msgstr "Contatto"
+
+#: ckanext/osed/templates/footer.html:66
+#: ckanext/osed/templates/header.html:34
+#: ckanext/osed/templates/package/base.html:8
+#: ckanext/osed/templates/package/base.html:16
+#: ckanext/osed/templates/package/base.html:21
+#: ckanext/osed/templates/package/search.html:4
+#: ckanext/osed/templates/package/search.html:7
+#: ckanext/osed/templates/package/search.html:11
+msgid "Data"
+msgstr "Dati"
+
+#: ckanext/osed/templates/footer.html:68
+#: ckanext/osed/templates/header.html:38
+msgid "Applications"
+msgstr "Applicazioni"
+
+#: ckanext/osed/templates/footer.html:75
+msgid "Legal framework"
+msgstr "Quadro giuridico"
+
+#: ckanext/osed/templates/footer.html:76
+msgid "API"
+msgstr "API"
+
+#: ckanext/osed/templates/footer.html:77
+msgid "Sourcecode"
+msgstr "Codice sorgente"
+
+#: ckanext/osed/templates/footer.html:84
+msgid "A joint project of the Confederation and the cantons"
+msgstr "Un progetto comune di Confederazione e Cantoni"
+
+#: ckanext/osed/templates/footer.html:85
+msgid ""
+msgstr ""
+
+#: ckanext/osed/templates/header.html:47
+msgid "Search"
+msgstr "Cerca"
+
+#: ckanext/osed/templates/group/index.html:22
+msgid "Search categories..."
+msgstr "Cerca categorie..."
+
+#: ckanext/osed/templates/group/index.html:35
+msgid "There are currently no categories available"
+msgstr "Al momento non vi sono categorie disponibili"
+
+#: ckanext/osed/templates/group/index.html:49
+#: ckanext/osed/templates/snippets/search_box.html:48
+msgid "Please try another search."
+msgstr "Provare con una nuova ricerca."
+
+#: ckanext/osed/templates/group/snippets/group_item.html:20
+#: ckanext/osed/templates/package/snippets/description.html:67
+msgid "View {name}"
+msgstr "Visualizza {name}"
+
+#: ckanext/osed/templates/group/snippets/group_item.html:23
+msgid "{num} Dataset"
+msgid_plural "{num} Datasets"
+msgstr[0] "{num} dataset"
+msgstr[1] "{num} dataset"
+
+#: ckanext/osed/templates/organization/index.html:3
+msgid ""
+msgstr ""
+
+#: ckanext/osed/templates/organization/index.html:22
+msgid "Which organizations publish their data?"
+msgstr "Quali organizzazioni pubblicano i loro dati?"
+
+#: ckanext/osed/templates/organization/index.html:36
+msgid "{num} organization"
+msgid_plural "{num} organizations"
+msgstr[0] "{num} organizzazione"
+msgstr[1] "{num} organizzazioni"
+
+#: ckanext/osed/templates/organization/index.html:49
+msgid "There are currently no organizations for this site"
+msgstr "Al momento non vi sono organizzazioni per questo sito"
+
+#: ckanext/osed/templates/package/read.html:9
+#: ckanext/osed/templates/snippets/package_item.html:31
+msgid "Private"
+msgstr "Privato"
+
+#: ckanext/osed/templates/package/read.html:14
+#: ckanext/osed/templates/snippets/package_item.html:40
+msgid "Draft"
+msgstr "Bozza"
+
+#: ckanext/osed/templates/package/read.html:17
+#: ckanext/osed/templates/snippets/package_item.html:42
+msgid "Deleted"
+msgstr "Cancellato"
+
+#: ckanext/osed/templates/package/resource_read.html:28
+#: ckanext/osed/templates/package/snippets/description.html:15
+msgid "Last updated"
+msgstr "Ultimo aggiornamento"
+
+#: ckanext/osed/templates/package/resource_read.html:63
+#: ckanext/osed/templates/package/snippets/description.html:54
+msgid "No organization available"
+msgstr "Nessuna organizzazione disponibile"
+
+#: ckanext/osed/templates/package/resource_read.html:70
+msgid "Format"
+msgstr "Formato"
+
+#: ckanext/osed/templates/package/resource_read.html:84
+#: ckanext/osed/templates/package/snippets/resource_item.html:22
+msgid "Download"
+msgstr "Download"
+
+#: ckanext/osed/templates/package/resource_read.html:88
+#: ckanext/osed/templates/package/snippets/resource_item.html:26
+msgid "Go to resource"
+msgstr "Vai alla risorsa"
+
+#: ckanext/osed/templates/package/resource_read.html:96
+#: ckanext/osed/templates/package/snippets/description.html:79
+msgid "Description"
+msgstr "Descrizione"
+
+#: ckanext/osed/templates/package/resource_read.html:106
+#: ckanext/osed/templates/package/snippets/additional_info.html:4
+msgid "Additional information"
+msgstr "Informazioni aggiuntive"
+
+#: ckanext/osed/templates/package/snippets/related_datasets.html:15
+msgid "Related datasets"
+msgstr "Dataset correlati"
+
+#: ckanext/osed/templates/package/snippets/resource_item.html:19
+msgid "Preview"
+msgstr "Anteprima"
+
+#: ckanext/osed/templates/package/snippets/resource_item.html:19
+msgid "More information"
+msgstr "Maggiori informazioni"
+
+#: ckanext/osed/templates/package/snippets/resources_list.html:15
+msgid "Resources"
+msgstr "Risorse"
+
+#: ckanext/osed/templates/package/snippets/resources_list.html:30
+msgid "This dataset has no resources"
+msgstr "Questo dataset non ha risorse"
+
+#: ckanext/osed/templates/scheming/display_snippets/languages.html:19
+msgid "Language independent"
+msgstr "Indipendente dalla lingua"
+
+#: ckanext/osed/templates/scheming/display_snippets/relations.html:8
+#: ckanext/osed/templates/scheming/display_snippets/relations.html:21
+msgid "Legal basis"
+msgstr "Basi legali"
+
+#: ckanext/osed/templates/snippets/facet_list.html:111
+msgid "Show More {facet_type}"
+msgstr "Mostra di più {facet_type}"
+
+#: ckanext/osed/templates/snippets/facet_list.html:114
+msgid "Show Less {facet_type}"
+msgstr "Mostra meno {facet_type}"
+
+#: ckanext/osed/templates/snippets/facet_list.html:117
+msgid "There are no {facet_type} that match this search"
+msgstr "Per questa ricerca non ci sono {facet_type}"
+
+#: ckanext/osed/templates/snippets/package_item.html:61
+msgid "This dataset has no description"
+msgstr "Questo dataset non ha descrizione"
+
+#: ckanext/osed/templates/snippets/search_box.html:17
+msgid "Search Filter"
+msgstr "Filtro di ricerca"
+
+#: ckanext/osed/templates/snippets/search_box.html:28
+msgid "Relevance"
+msgstr "Rilevanza"
+
+#: ckanext/osed/templates/snippets/search_box.html:29
+msgid "Name Ascending"
+msgstr "Nome crescente"
+
+#: ckanext/osed/templates/snippets/search_box.html:30
+msgid "Name Descending"
+msgstr "Nome decrescente"
+
+#: ckanext/osed/templates/snippets/search_box.html:31
+msgid "Last Modified"
+msgstr "Ultima modifica"
+
+#: ckanext/osed/templates/snippets/search_box.html:32
+msgid "Popular"
+msgstr "Popolare"
+
+#: ckanext/osed/templates/snippets/search_box.html:35
+msgid "Order by"
+msgstr "Ordina secondo"
+
+#: ckanext/osed/templates/snippets/search_box.html:52
+msgid "There was an error while searching. Please try again."
+msgstr "Durante la ricerca si è verificato un errore. Si prega di riprovare."
+
+#: ckanext/osed/templates/snippets/search_form.html:16
+msgid "Search datasets..."
+msgstr "Cerca dataset..."
+
+#: ckanext/osed/templates/snippets/search_result_text.html:15
+#: ckanext/osed/templates/snippets/search_result_text.html:17
+msgid "{number} dataset found"
+msgid_plural "{number} datasets found"
+msgstr[0] "{number} dataset trovato"
+msgstr[1] "{number} dataset trovati"
+
+#: ckanext/osed/templates/snippets/search_result_text.html:16
+#: ckanext/osed/templates/snippets/search_result_text.html:18
+msgid "No datasets found"
+msgstr "Nessun dataset trovato"
+
+#: ckanext/osed/templates/snippets/search_result_text.html:21
+#: ckanext/osed/templates/snippets/search_result_text.html:23
+msgid "{number} category found"
+msgid_plural "{number} categories found"
+msgstr[0] "{number} categoria trovata"
+msgstr[1] "{number} categorie trovate"
+
+#: ckanext/osed/templates/snippets/search_result_text.html:22
+#: ckanext/osed/templates/snippets/search_result_text.html:24
+msgid "No categories found"
+msgstr "Nessuna categoria trovata"
+
+#: ckanext/osed/templates/snippets/search_result_text.html:27
+#: ckanext/osed/templates/snippets/search_result_text.html:29
+msgid "{number} organization found"
+msgid_plural "{number} organizations found"
+msgstr[0] "{number} organizzazione trovata"
+msgstr[1] "{number} organizzazioni trovate"
+
+#: ckanext/osed/templates/snippets/search_result_text.html:28
+#: ckanext/osed/templates/snippets/search_result_text.html:30
+msgid "No organizations found"
+msgstr "Nessuna organizzazione trovata"

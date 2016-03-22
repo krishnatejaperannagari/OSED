@@ -1,0 +1,65 @@
+<section class="container additional-info">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>{{ _('Additional information') }}</h2>
+      <dl class="dl-horizontal">
+      {% block package_additional_info %}
+        {% if pkg_dict.url %}
+            <dt class="dataset-label">{{ _('Source') }}</dt>
+            {% if h.is_url(pkg_dict.url) %}
+              <dd class="dataset-details">{{ h.link_to(pkg_dict.url, pkg_dict.url, rel='foaf:homepage', target='_blank') }}</dd>
+            {% else %}
+              <dd class="dataset-details">{{ pkg_dict.url }}</dd>
+            {% endif %}
+        {% endif %}
+
+        {% if pkg_dict.author_email %}
+            <dt class="dataset-label">{{ _("Author") }}</dt>
+            <dd class="dataset-details">{{ h.mail_to(email_address=pkg_dict.author_email, name=pkg_dict.author) }}</dd>
+        {% elif pkg_dict.author %}
+            <dt class="dataset-label">{{ _("Author") }}</dt>
+            <dd class="dataset-details">{{ pkg_dict.author }}</dd>
+        {% endif %}
+
+        {% if pkg_dict.maintainer_email %}
+            <dt class="dataset-label">{{ _('Maintainer') }}</dt>
+            <dd class="dataset-details">{{ h.mail_to(email_address=pkg_dict.maintainer_email, name=pkg_dict.maintainer) }}</dd>
+        {% elif pkg_dict.maintainer %}
+            <dt class="dataset-label">{{ _('Maintainer') }}</dt>
+            <dd class="dataset-details">{{ pkg_dict.maintainer }}</dd>
+        {% endif %}
+
+        {% if pkg_dict.version %}
+            <dt class="dataset-label">{{ _("Version") }}</dt>
+            <dd class="dataset-details">{{ pkg_dict.version }}</dd>
+        {% endif %}
+
+        {% if h.check_access('package_update',{'id':pkg_dict.id}) %}
+            <dt class="dataset-label">{{ _("State") }}</dt>
+            <dd class="dataset-details">{{ _(pkg_dict.state) }}</dd>
+        {% endif %}
+        
+        {% if pkg_dict.metadata_created %}
+            <dt class="dataset-label">{{ _("Created") }}</dt>
+            <dd class="dataset-details">
+                {% snippet 'snippets/local_friendly_datetime.html', datetime_obj=pkg_dict.metadata_created %}
+            </dd>
+        {% endif %}
+
+      {% endblock %}
+      </dl>
+      
+      <h2>{{ _('Extra Fields') }}</h2>
+      <dl class="dl-horizontal">
+      {% block extras scoped %}
+        {% for extra in h.sorted_extras(pkg_dict.extras) %}
+          {% set key, value = extra %}
+            <dt class="dataset-label">{{ _(key) }}</dt>
+            <dd class="dataset-details">{{ value }}</dd>
+        {% endfor %}
+      {% endblock %}
+      </dl>
+
+    </div>
+  </div>
+</section>

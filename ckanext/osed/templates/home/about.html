@@ -1,0 +1,36 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('About') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('About'), controller='group', action='index' %}</li>
+{% endblock %}
+
+{% block page_title %}
+  <h1>{{ _('About') }}</h1>
+{% endblock %}
+
+{% block primary_content %}
+  <div class="container">
+    <main class="row">
+      <article class="col-xs-12 post-97 page type-page status-publish hentry language-en">
+        <div class="entry-content">
+          <p>OSED is a portal for energy simulation data. The data is collected from various organisations, government agencies and research facilities. The OSED platform is developed and maintained by the Urban Energy Systems Laboratory at Empa</p>
+          <h3>Features</h3>
+          <ul>
+            <li>Easy to use Web Interface and APi</li>
+            <li>Harvesting mechanism to Fetch and Import data</li>
+            <li>Support for Data Visualisation and Analysis</li>
+            <li>Advanced Geospatial Features</li>
+            <li>Better search and discovery options</li></li>
+            <li>Supports wide variety of File Formats</li>
+          </ul>
+          <h3>About HUES Platform:</h3>
+          <p>The Holistic Urban Energy Simulation (HUES) platform is an extendable simulation environment for the study of urban multi-energy systems. The platform consists of a growing array of modules and datasets which may be linked in different ways to address different problems in the domain of urban energy systems.</p>
+          <p>The platform was conceived as a better way of managing and integrating models and data that are developed by researchers. The HUES platform facilitates the integration and reuse of constituent modules, opening up possibilities to address the complexity of urban energy systems.</p>
+          <p>To learn more about HUES please visit <a href="https://hues.empa.ch/" >HUES Website.</a></p>
+        </div>
+      </article>
+    </main>
+  </div>
+{% endblock %}

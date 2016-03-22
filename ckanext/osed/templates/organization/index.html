@@ -1,0 +1,45 @@
+{% extends "page.html" %}
+
+{% block meta_description %}<meta name="description" content="{{ page_description|truncate(200) }}" />{% endblock %}
+
+{% block subtitle %}{{ _('Organizations') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Organizations'), controller='organization', action='index' %}</li>
+{% endblock %}
+
+{% block page_title %}
+  <h1>{{ _('Organizations') }}</h1>
+{% endblock %}
+
+{% block primary_content %}
+  <form id="organization-search-form" class="search-form" method="get" data-module="select-switch">
+    <section class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <p>Here is a list of Organizations that have published data on OSED.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          {% block organizations_list %}
+            {% if c.page.items or request.params %}
+              {% if c.page.items %}
+                {# The code can be problematic if there are large number of organizations. See Snippet Documentation #}
+                {% snippet 'organization/snippets/organization_tree.html', top_nodes=c.page.items %}
+              {% endif %}
+            {% else %}
+              <p class="empty">
+                {{ _('There are currently no organizations for this site') }}.
+              </p>
+            {% endif %}
+          {% endblock %}
+        </div>
+      </div>
+    </section>
+
+  </form>
+{% endblock %}
+

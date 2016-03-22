@@ -1,0 +1,150 @@
+{
+  "scheming_presets_version": 1,
+  "about": "these are the default scheming field presets",
+  "about_url": "http://github.com/open-data/ckanext-scheming#preset",
+  "presets": [
+    {
+      "preset_name": "title",
+      "values": {
+        "validators": "if_empty_same_as(name) unicode",
+        "form_snippet": "large_text.html",
+        "form_attrs": {
+          "data-module": "slug-preview-target"
+        }
+      }
+    },
+    {
+      "preset_name": "temporals",
+      "values": {
+        "display_snippet": "temporals.html",
+        "validators": "list_of_dicts",
+        "output_validators": "temporals_to_datetime_output"
+      }
+    },
+    {
+      "preset_name": "dicts",
+      "values": {
+        "validators": "list_of_dicts",
+        "output_validators": "multiple_text_output"
+      }
+    },
+    {
+      "preset_name": "multiple_text",
+      "values": {
+        "output_validators": "multiple_text_output"
+      }
+    },
+    {
+      "preset_name": "multilingual_output",
+      "values": {
+        "validators": "ignore",
+        "output_validators": "multilingual_text_output"
+      }
+    },
+    {
+      "preset_name": "multilingual_text",
+      "values": {
+        "form_snippet": "fluent_text.html",
+        "validators": "fluent_text",
+        "output_validators": "multilingual_text_output"
+      }
+    },
+    {
+      "preset_name": "multilingual_markdown",
+      "values": {
+        "form_snippet": "fluent_markdown.html",
+        "validators": "fluent_text",
+        "output_validators": "multilingual_text_output"
+      }
+    },
+    {
+      "preset_name": "dataset_slug",
+      "values": {
+        "validators": "not_empty unicode name_validator package_name_validator",
+        "form_snippet": "slug.html"
+      }
+    },
+    {
+      "preset_name": "group_slug",
+      "values": {
+        "validators": "not_empty unicode name_validator group_name_validator",
+        "form_snipper": "slug.html"
+      }
+    },
+    {
+      "preset_name": "tag_string_autocomplete",
+      "values": {
+        "validators": "ignore_missing tag_string_convert",
+        "form_attrs": {
+          "data-module": "autocomplete",
+          "data-module-tags": "",
+          "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
+        }
+      }
+    },
+    {
+      "preset_name": "dataset_organization",
+      "values": {
+        "validators": "owner_org_validator unicode",
+        "form_snippet": "organization.html"
+      }
+    },
+    {
+      "preset_name": "url",
+      "values": {
+        "display_snippet": "url.html"
+      }
+    },
+    {
+      "preset_name": "resource_format_autocomplete",
+      "values": {
+        "validators": "ignore_missing clean_format unicode",
+        "form_placeholder": "eg. CSV, XML or JSON",
+        "form_attrs": {
+          "data-module": "autocomplete",
+          "data-module-source": "/api/2/util/resource/format_autocomplete?incomplete=?"
+        }
+      }
+    },
+    {
+      "preset_name": "select",
+      "values": {
+        "form_snippet": "select.html",
+        "display_snippet": "select.html",
+        "validators": "scheming_required scheming_choices"
+      }
+    },
+    {
+      "preset_name": "languages",
+      "values": {
+        "form_snippet": "multiple_checkbox.html",
+        "display_snippet": "languages.html",
+        "validators": "osed_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output"
+      }
+    },
+    {
+      "preset_name": "multiple_select",
+      "values": {
+        "form_snippet": "multiple_select.html",
+        "display_snippet": "multiple_choice.html",
+        "validators": "scheming_multiple_choice",
+        "output_validators": "scheming_multiple_choice_output"
+      }
+    },
+    {
+      "preset_name": "osed_date",
+      "values": {
+        "display_snippet": "date.html",
+        "output_validators": "timestamp_to_datetime"
+      }
+    },
+    {
+      "preset_name": "file_size",
+      "values": {
+        "validators": "ignore_empty natural_number_validator",
+        "display_snippet": "file_size.html"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{#
+Renders the description of a package
+
+pkg - A package object that the resources belong to.
+
+Example:
+
+{% snippet "package/snippets/description.html", pkg=pkg %}
+
+#}
+<section class="container information">
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <dl>
+        <dt>{{ _('Last updated') }}</dt>
+        <dd>
+          {% if pkg.metadata_modified %}
+                {% snippet 'snippets/local_friendly_datetime.html', datetime_obj=pkg.metadata_modified %}
+          {% else %}
+            -
+          {% endif %}
+        </dd>
+      </dl>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <dl>
+        <dt>{{ _('Terms of use') }}</dt>
+        <dd class="terms">
+            <a href="{{ h.url('/terms-of-use') }}">
+              {% if 'license_url' in pkg %}
+                <a href="{{ pkg.license_url }}" rel="dc:rights">{{ pkg.license_title }}</a>
+              {% elif pkg.license_title %}
+                <span property="dc:rights">{{ pkg.license_title }}</span>
+              {% else %}
+                -
+              {% endif %}
+          </a>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <dl>
+          <dt>{{ ungettext('Organization', 'Organizations', 1) }}</dt>
+        <dd>
+          {% if pkg.owner_org %}
+          {% set organization = h.get_localized_org(pkg.owner_org) %}
+          {% set url = h.url_for(controller='organization', action='read', id=organization.name) %}
+          <a href="{{ url }}">{{ organization.title or organization.name }}</a>
+          {% else %}
+          {{ _('No organization available') }}
+          {% endif %}
+        </dd>
+      </dl>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <dl>
+        <dt>{{ _('Categories') }}</dt>
+        <dd>
+        {% if pkg.groups %}
+          {% for group in pkg.groups %}
+            {% set type = group.type or 'group' %}
+            {% set url = h.url_for(type ~ '_read', action='read', id=group.name) %}
+            <a href="{{ url }}" title="{{ _('View {name}').format(name=group.title) }}">{{ group.title }}</a>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        {% else %}
+          -
+        {% endif %}
+        </dd>
+      </dl>
+    </div>
+  </div>
+  {% if pkg.notes %}
+    <div class="row description">
+      <div class="col-xs-12">
+        <h2>{{ _('Description') }}</h2>
+        <p>{{ h.render_markdown(pkg.notes) }}</p>
+      </div>
+    </div>
+  {% endif %}
+</section>
